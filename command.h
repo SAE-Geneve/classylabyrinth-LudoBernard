@@ -1,12 +1,27 @@
 #pragma once
 
-#include "tile.h"
+#include "player.h"
+#include "world.h"
 
-void north();
-void south();
-void east();
-void west();
+class Command
+{
+public:
+	void North();
+	void South();
+	void East();
+	void West();
 
-void attack();
+	void Attack();
 
-void tick();
+	void Tick();
+	void ShowHelp();
+	char GetCommand();
+	void ShowState();
+	void ExecuteCommand();
+
+	void CheckEnemies();
+	
+
+private:
+	World world_;
+};
