@@ -69,6 +69,7 @@ void Command::Attack()
 		enemy_vec.push_back(world_.GetEnemy(player.GetX() - 1, player.GetY()));
 	if (world_.GetTileAtPosition(player.GetX() + 1, player.GetY()) == 'E')
 		enemy_vec.push_back(world_.GetEnemy(player.GetX() + 1, player.GetY()));
+	//Doesn't work
 	for(auto enemy : enemy_vec)
 	{
 		enemy.SetHealth(enemy.GetHealth() - player.GetAttack() + enemy.GetDefense());
